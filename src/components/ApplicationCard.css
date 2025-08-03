@@ -1,0 +1,274 @@
+.application-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  padding: 30px;
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  position: relative;
+}
+
+.application-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #374151;
+}
+
+.application-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.applicant-info h3 {
+  margin: 0 0 15px 0;
+  color: #1e293b;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.type-badge,
+.status-badge {
+  padding: 6px 16px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.type-badge.intern {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+}
+
+.type-badge.volunteer {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.expand-btn {
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  border: 2px solid #e2e8f0;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #475569;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.expand-btn:hover {
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+  border-color: #94a3b8;
+  transform: scale(1.1);
+}
+
+.card-basic-info {
+  margin-bottom: 20px;
+}
+
+.card-basic-info p {
+  margin: 8px 0;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.card-expanded {
+  border-top: 2px solid #f1f5f9;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.info-section {
+  margin-bottom: 25px;
+}
+
+.info-section h4 {
+  color: #1e293b;
+  margin: 0 0 15px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+  background: linear-gradient(white, white), linear-gradient(135deg, #4f46e5, #7c3aed, #ec4899);
+  background-clip: padding-box, border-box;
+  border-image: linear-gradient(135deg, #4f46e5, #7c3aed, #ec4899) 1;
+}
+
+.text-block {
+  margin-bottom: 15px;
+}
+
+.text-block p:first-child {
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.text-block p:last-child {
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  padding: 15px;
+  border-radius: 12px;
+  border-left: 4px solid transparent;
+  background-image: linear-gradient(135deg, #f8fafc, #f1f5f9), linear-gradient(135deg, #4f46e5, #7c3aed);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.card-actions {
+  border-top: 2px solid #f1f5f9;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.status-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.action-btn:hover:not(:disabled)::before {
+  left: 0;
+}
+
+.approve-btn {
+  background: #059669;
+  color: white;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+}
+
+.approve-btn:hover:not(:disabled) {
+  background: #047857;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(5, 150, 105, 0.4);
+}
+
+.reject-btn {
+  background: #dc2626;
+  color: white;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.reject-btn:hover:not(:disabled) {
+  background: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(220, 38, 38, 0.4);
+}
+
+.pending-btn {
+  background: #d97706;
+  color: white;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.3);
+}
+
+.pending-btn:hover:not(:disabled) {
+  background: #b45309;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(217, 119, 6, 0.4);
+}
+
+.delete-btn {
+  background: #64748b;
+  color: white;
+  box-shadow: 0 4px 15px rgba(100, 116, 139, 0.3);
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #475569, #334155);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(100, 116, 139, 0.4);
+}
+
+.action-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 768px) {
+  .application-card {
+    padding: 15px;
+  }
+  
+  .card-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .applicant-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .status-actions {
+    justify-content: center;
+  }
+  
+  .action-btn {
+    flex: 1;
+    min-width: 80px;
+  }
+}

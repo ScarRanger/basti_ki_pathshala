@@ -1,0 +1,135 @@
+.config-notice {
+  background: #374151;
+  color: white;
+  padding: 20px;
+  border-bottom: 3px solid #4b5563;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.config-notice-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.config-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    transform: scale(1);
+    background: rgba(255, 255, 255, 0.15);
+  }
+}
+
+.config-text h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.config-text p {
+  margin: 0 0 20px 0;
+  opacity: 0.95;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.config-steps {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  border-left: 4px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.config-steps p {
+  margin: 0 0 15px 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.config-steps ol {
+  margin: 0;
+  padding-left: 25px;
+}
+
+.config-steps li {
+  margin-bottom: 12px;
+  opacity: 0.92;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.config-steps a {
+  color: #fbbf24;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.config-steps a:hover {
+  text-decoration: none;
+  color: #f59e0b;
+  text-shadow: 0 0 8px rgba(251, 191, 36, 0.5);
+}
+
+.config-steps code {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 4px 8px;
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fbbf24;
+}
+
+@media (max-width: 768px) {
+  .config-notice {
+    padding: 15px;
+  }
+  
+  .config-notice-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .config-icon {
+    font-size: 2rem;
+    padding: 12px;
+  }
+  
+  .config-text h3 {
+    font-size: 1.2rem;
+  }
+  
+  .config-steps {
+    padding: 15px;
+  }
+  
+  .config-steps ol {
+    padding-left: 20px;
+  }
+}
