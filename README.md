@@ -149,10 +149,6 @@ basti_ki_pathshala/
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 📞 Support
-
-For support or questions, please contact [your-email@example.com]
-
 ## 🎉 Acknowledgments
 
 - Built with love for educational and social impact
